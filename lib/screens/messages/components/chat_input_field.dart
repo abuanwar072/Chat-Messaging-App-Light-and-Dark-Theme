@@ -4,7 +4,7 @@ import '../../../constants.dart';
 
 class ChatInputField extends StatelessWidget {
   const ChatInputField({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -44,8 +44,8 @@ class ChatInputField extends StatelessWidget {
                       Icons.sentiment_satisfied_alt_outlined,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1
-                          .color
+                          .bodyText1!
+                          .color!
                           .withOpacity(0.64),
                     ),
                     SizedBox(width: kDefaultPadding / 4),
@@ -61,8 +61,8 @@ class ChatInputField extends StatelessWidget {
                       Icons.attach_file,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1
-                          .color
+                          .bodyText1!
+                          .color!
                           .withOpacity(0.64),
                     ),
                     SizedBox(width: kDefaultPadding / 4),
@@ -70,8 +70,8 @@ class ChatInputField extends StatelessWidget {
                       Icons.camera_alt_outlined,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1
-                          .color
+                          .bodyText1!
+                          .color!
                           .withOpacity(0.64),
                     ),
                   ],

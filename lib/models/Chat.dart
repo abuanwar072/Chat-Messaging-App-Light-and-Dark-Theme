@@ -3,11 +3,11 @@ class Chat {
   final bool isActive;
 
   Chat({
-    this.name,
-    this.lastMessage,
-    this.image,
-    this.time,
-    this.isActive,
+    this.name = '',
+    this.lastMessage = '',
+    this.image = '',
+    this.time = '',
+    this.isActive = false,
   });
 }
 

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 enum ChatMessageType { text, audio, image, video }
 enum MessageStatus { not_sent, not_view, viewed }
 
@@ -10,10 +8,10 @@ class ChatMessage {
   final bool isSender;
 
   ChatMessage({
-    this.text,
-    @required this.messageType,
-    @required this.messageStatus,
-    @required this.isSender,
+    this.text = '',
+    required this.messageType,
+    required this.messageStatus,
+    required this.isSender,
   });
 }
 

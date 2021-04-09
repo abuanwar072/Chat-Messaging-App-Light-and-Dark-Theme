@@ -4,10 +4,10 @@ import '../constants.dart';
 
 class FillOutlineButton extends StatelessWidget {
   const FillOutlineButton({
-    Key key,
+    Key? key,
     this.isFilled = true,
-    @required this.press,
-    @required this.text,
+    required this.press,
+    required this.text,
   }) : super(key: key);
 
   final bool isFilled;

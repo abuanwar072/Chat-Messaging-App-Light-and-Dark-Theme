@@ -8,8 +8,8 @@ import 'video_message.dart';
 
 class Message extends StatelessWidget {
   const Message({
-    Key key,
-    @required this.message,
+    Key? key,
+    required this.message,
   }) : super(key: key);
 
   final ChatMessage message;
@@ -20,13 +20,10 @@ class Message extends StatelessWidget {
       switch (message.messageType) {
         case ChatMessageType.text:
           return TextMessage(message: message);
-          break;
         case ChatMessageType.audio:
           return AudioMessage(message: message);
-          break;
         case ChatMessageType.video:
           return VideoMessage();
-          break;
         default:
           return SizedBox();
       }
@@ -54,22 +51,19 @@ class Message extends StatelessWidget {
 }
 
 class MessageStatusDot extends StatelessWidget {
-  final MessageStatus status;
+  final MessageStatus? status;
 
-  const MessageStatusDot({Key key, this.status}) : super(key: key);
+  const MessageStatusDot({Key? key, this.status}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Color dotColor(MessageStatus status) {
       switch (status) {
         case MessageStatus.not_sent:
           return kErrorColor;
-          break;
         case MessageStatus.not_view:
-          return Theme.of(context).textTheme.bodyText1.color.withOpacity(0.1);
-          break;
+          return Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.1);
         case MessageStatus.viewed:
           return kPrimaryColor;
-          break;
         default:
           return Colors.transparent;
       }
@@ -80,7 +74,7 @@ class MessageStatusDot extends StatelessWidget {
       height: 12,
       width: 12,
       decoration: BoxDecoration(
-        color: dotColor(status),
+        color: dotColor(status!),
         shape: BoxShape.circle,
       ),
       child: Icon(
