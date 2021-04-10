@@ -31,6 +31,9 @@ dependencies:
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
 
+  # Draw SVG files
+  flutter_svg: ^0.21.0+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

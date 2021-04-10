@@ -2,9 +2,7 @@ import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// This is our  main focus
 // Let's apply light and dark theme on our app
-// Now let's add dark theme on our app
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
