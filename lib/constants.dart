@@ -14,3 +14,9 @@ const logoLightTheme = "assets/icons/Only_logo_light_theme.svg";
 
 const requiredField = "This field is required";
 const invalidEmail = "Enter a valid email address";
+
+const InputDecoration otpInputDecoration = InputDecoration(
+  filled: false,
+  border: UnderlineInputBorder(),
+  hintText: "0",
+);
