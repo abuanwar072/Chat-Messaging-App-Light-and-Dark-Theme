@@ -7,4 +7,10 @@ const kContentColorDarkTheme = Color(0xFFF5FCF9);
 const kWarninngColor = Color(0xFFF3BB1C);
 const kErrorColor = Color(0xFFF03738);
 
-const kDefaultPadding = 20.0;
+const kDefaultPadding = 16.0;
+
+const logoDarkTheme = "assets/icons/Only_logo_dark_theme.svg";
+const logoLightTheme = "assets/icons/Only_logo_light_theme.svg";
+
+const requiredField = "This field is required";
+const invalidEmail = "Enter a valid email address";

@@ -34,6 +34,9 @@ dependencies:
   # Draw SVG files
   flutter_svg: ^0.21.0+1
 
+  # flutter form field validator that provides common validation options
+  form_field_validator: ^1.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

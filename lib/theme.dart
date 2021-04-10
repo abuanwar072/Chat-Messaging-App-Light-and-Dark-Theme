@@ -24,6 +24,8 @@ ThemeData lightThemeData(BuildContext context) {
       selectedIconTheme: IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
+    inputDecorationTheme: inputDecorationTheme.copyWith(
+        fillColor: kPrimaryColor.withOpacity(0.05)),
   );
 }
 
@@ -49,7 +51,18 @@ ThemeData darkThemeData(BuildContext context) {
       selectedIconTheme: IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
+    inputDecorationTheme: inputDecorationTheme,
   );
 }
 
 final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+final inputDecorationTheme = InputDecorationTheme(
+  filled: true,
+  fillColor: kContentColorDarkTheme.withOpacity(0.08),
+  contentPadding: EdgeInsets.symmetric(
+      horizontal: kDefaultPadding * 1.5, vertical: kDefaultPadding),
+  border: OutlineInputBorder(
+    borderSide: BorderSide.none,
+    borderRadius: const BorderRadius.all(Radius.circular(50)),
+  ),
+);
