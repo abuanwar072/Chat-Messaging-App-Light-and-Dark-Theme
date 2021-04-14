@@ -57,8 +57,7 @@ class SignUpScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             vertical: kDefaultPadding),
                         child: TextFormField(
-                          validator:
-                              RequiredValidator(errorText: requiredField),
+                          validator: passwordValidator,
                           decoration: InputDecoration(hintText: 'Password'),
                           obscureText: true,
                           onSaved: (passaword) {

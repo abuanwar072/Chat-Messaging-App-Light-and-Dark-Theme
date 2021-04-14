@@ -42,7 +42,9 @@ class LogoWithTitle extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
                 child: Text(
                   subText,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
+                    height: 1.5,
                     color: Theme.of(context)
                         .textTheme
                         .bodyText1!
