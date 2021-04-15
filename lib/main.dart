@@ -1,3 +1,4 @@
+import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:chat/screens/welcome/splash_screen.dart';
 import 'package:chat/screens/welcome/welcome_screen.dart';
 import 'package:chat/theme.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
       darkTheme: darkThemeData(context),
-      home: SplashScreen(),
+      home: ChatsScreen(),
     );
   }
 }

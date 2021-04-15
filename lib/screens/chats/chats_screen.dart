@@ -1,4 +1,5 @@
 import 'package:chat/constants.dart';
+import 'package:chat/screens/search/search_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';
@@ -58,7 +59,13 @@ class _ChatsScreenState extends State<ChatsScreen> {
       actions: [
         IconButton(
           icon: Icon(Icons.search),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SearchScreen(),
+                ));
+          },
         ),
       ],
     );
