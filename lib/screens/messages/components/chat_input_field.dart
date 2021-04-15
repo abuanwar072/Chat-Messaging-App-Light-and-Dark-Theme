@@ -1,85 +1,100 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
+import 'message_attachment.dart';
 
-class ChatInputField extends StatelessWidget {
+class ChatInputField extends StatefulWidget {
   const ChatInputField({
     Key? key,
   }) : super(key: key);
 
   @override
+  _ChatInputFieldState createState() => _ChatInputFieldState();
+}
+
+class _ChatInputFieldState extends State<ChatInputField> {
+  bool _showAttachment = false;
+
+  void _updateAttachmentState() {
+    setState(() {
+      _showAttachment = !_showAttachment;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding,
-        vertical: kDefaultPadding / 2,
-      ),
-      decoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 4),
-            blurRadius: 32,
-            color: Color(0xFF087949).withOpacity(0.08),
-          ),
-        ],
-      ),
-      child: SafeArea(
-        child: Row(
-          children: [
-            Icon(Icons.mic, color: kPrimaryColor),
-            SizedBox(width: kDefaultPadding),
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: kDefaultPadding * 0.75,
+    return SafeArea(
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: kDefaultPadding,
+              vertical: kDefaultPadding / 2,
+            ),
+            decoration: BoxDecoration(
+              color: Theme.of(context).scaffoldBackgroundColor,
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, -4),
+                  blurRadius: 32,
+                  color: Color(0xFF087949).withOpacity(0.08),
                 ),
-                decoration: BoxDecoration(
-                  color: kPrimaryColor.withOpacity(0.05),
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.sentiment_satisfied_alt_outlined,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                    SizedBox(width: kDefaultPadding / 4),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Type message",
-                          border: InputBorder.none,
+              ],
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.mic, color: kPrimaryColor),
+                SizedBox(width: kDefaultPadding),
+                Expanded(
+                  child: Row(
+                    children: [
+                      SizedBox(width: kDefaultPadding / 4),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                              hintText: "Type message",
+                              suffixIcon: SizedBox(
+                                width: 65,
+                                child: Row(
+                                  children: [
+                                    InkWell(
+                                      onTap: _updateAttachmentState,
+                                      child: Icon(
+                                        Icons.attach_file,
+                                        color: _showAttachment
+                                            ? kPrimaryColor
+                                            : Theme.of(context)
+                                                .textTheme
+                                                .bodyText1!
+                                                .color!
+                                                .withOpacity(0.64),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: kDefaultPadding / 2),
+                                      child: Icon(
+                                        Icons.camera_alt_outlined,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .bodyText1!
+                                            .color!
+                                            .withOpacity(0.64),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )),
                         ),
                       ),
-                    ),
-                    Icon(
-                      Icons.attach_file,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                    SizedBox(width: kDefaultPadding / 4),
-                    Icon(
-                      Icons.camera_alt_outlined,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1!
-                          .color!
-                          .withOpacity(0.64),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+          if (_showAttachment) MessageAttachment(),
+        ],
       ),
     );
   }
