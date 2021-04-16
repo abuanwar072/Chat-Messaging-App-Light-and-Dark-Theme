@@ -37,6 +37,9 @@ dependencies:
   # flutter form field validator that provides common validation options
   form_field_validator: ^1.1.0
 
+  # This package contains pre-canned animations for commonly-desired effects
+  animations: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

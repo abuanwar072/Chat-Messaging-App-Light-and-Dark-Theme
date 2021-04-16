@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:chat/screens/contacts/contacts_screen.dart';
 import 'package:flutter/material.dart';
@@ -8,28 +9,38 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
-  Widget displayScreen() {
-    switch (_selectedIndex) {
-      case 0:
-        return ChatsScreen();
-      case 1:
-        return ContactsScreen();
-      default:
-        return ChatsScreen();
-    }
-  }
+  int pageIndex = 0;
+
+  List<Widget> pageList = <Widget>[
+    ChatsScreen(),
+    ContactsScreen(),
+    ChatsScreen(),
+    ChatsScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: displayScreen(),
+      body: PageTransitionSwitcher(
+        transitionBuilder: (
+          Widget child,
+          Animation<double> animation,
+          Animation<double> secondaryAnimation,
+        ) {
+          return FadeThroughTransition(
+            animation: animation,
+            secondaryAnimation: secondaryAnimation,
+            child: child,
+          );
+        },
+        child: pageList[pageIndex],
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
+        currentIndex: pageIndex,
         onTap: (value) {
           setState(() {
-            _selectedIndex = value;
+            pageIndex = value;
           });
         },
         items: [
