@@ -1,4 +1,6 @@
 import 'package:chat/constants.dart';
+import 'package:chat/screens/call/audio_call_screen.dart';
+import 'package:chat/screens/call/video_call_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';
@@ -7,12 +9,12 @@ class MessagesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: buildAppBar(context),
       body: Body(),
     );
   }
 
-  AppBar buildAppBar() {
+  AppBar buildAppBar(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
       title: Row(
@@ -40,11 +42,21 @@ class MessagesScreen extends StatelessWidget {
       actions: [
         IconButton(
           icon: Icon(Icons.local_phone),
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AudioCallingScreen(),
+            ),
+          ),
         ),
         IconButton(
           icon: Icon(Icons.videocam),
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => VideoCallScreen(),
+            ),
+          ),
         ),
         SizedBox(width: kDefaultPadding / 2),
       ],
