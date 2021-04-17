@@ -1,7 +1,7 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'recent_search_contacts.dart';
+import '../../../components/recent_search_contacts.dart';
 
 class Body extends StatelessWidget {
   @override

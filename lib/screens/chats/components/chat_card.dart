@@ -1,6 +1,7 @@
 import 'package:chat/models/Chat.dart';
 import 'package:flutter/material.dart';
 
+import '../../../components/circle_avatar_with_active_indicator.dart';
 import '../../../constants.dart';
 
 class ChatCard extends StatelessWidget {
@@ -22,29 +23,9 @@ class ChatCard extends StatelessWidget {
             horizontal: kDefaultPadding, vertical: kDefaultPadding * 0.75),
         child: Row(
           children: [
-            Stack(
-              children: [
-                CircleAvatar(
-                  radius: 24,
-                  backgroundImage: AssetImage(chat.image),
-                ),
-                if (chat.isActive)
-                  Positioned(
-                    right: 0,
-                    bottom: 0,
-                    child: Container(
-                      height: 16,
-                      width: 16,
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                            color: Theme.of(context).scaffoldBackgroundColor,
-                            width: 3),
-                      ),
-                    ),
-                  )
-              ],
+            CircleAvatarWithActiveIndicator(
+              image: chat.image,
+              isActive: chat.isActive,
             ),
             Expanded(
               child: Padding(
