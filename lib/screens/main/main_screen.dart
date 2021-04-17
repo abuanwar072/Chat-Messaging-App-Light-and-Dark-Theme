@@ -2,6 +2,7 @@ import 'package:animations/animations.dart';
 import 'package:chat/screens/calls/calls_hsitory_screen.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:chat/screens/contacts/contacts_screen.dart';
+import 'package:chat/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
     ChatsScreen(),
     ContactsScreen(),
     CallsHistoryScreen(),
-    ChatsScreen(),
+    ProfileScreen(),
   ];
 
   @override
