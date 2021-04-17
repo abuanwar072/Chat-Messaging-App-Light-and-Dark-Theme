@@ -1,4 +1,5 @@
 import 'package:animations/animations.dart';
+import 'package:chat/screens/calls/calls_hsitory_screen.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:chat/screens/contacts/contacts_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> pageList = <Widget>[
     ChatsScreen(),
     ContactsScreen(),
-    ChatsScreen(),
+    CallsHistoryScreen(),
     ChatsScreen(),
   ];
 

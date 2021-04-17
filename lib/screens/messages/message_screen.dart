@@ -1,6 +1,6 @@
 import 'package:chat/constants.dart';
-import 'package:chat/screens/call/audio_call_screen.dart';
-import 'package:chat/screens/call/video_call_screen.dart';
+import 'package:chat/screens/calling/audio_calling_screen.dart';
+import 'package:chat/screens/calling/video_calling_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';
@@ -54,7 +54,7 @@ class MessagesScreen extends StatelessWidget {
           onPressed: () => Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => VideoCallScreen(),
+              builder: (context) => VideoCallingScreen(),
             ),
           ),
         ),

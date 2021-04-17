@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'components/call_bg.dart';
 import 'components/call_option.dart';
 
-class VideoCallScreen extends StatelessWidget {
+class VideoCallingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
