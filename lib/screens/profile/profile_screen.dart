@@ -1,6 +1,9 @@
 import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
+import 'package:chat/screens/profile/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'components/info.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -19,24 +22,7 @@ class ProfileScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(kDefaultPadding),
-              margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Theme.of(context)
-                      .textTheme
-                      .bodyText1!
-                      .color!
-                      .withOpacity(0.08),
-                ),
-              ),
-              child: CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage("assets/images/user_2.png"),
-              ),
-            ),
+            ProfilePic(image: "assets/images/user_2.png"),
             Text(
               "Annette Black",
               style: Theme.of(context).textTheme.headline6,
@@ -66,7 +52,12 @@ class ProfileScreen extends StatelessWidget {
                 child: PrimaryButton(
                   padding: EdgeInsets.all(5),
                   text: "Edit Profile",
-                  press: () {},
+                  press: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EditProfileScreen(),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -77,33 +68,49 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-class Info extends StatelessWidget {
-  const Info({
+class ProfilePic extends StatelessWidget {
+  const ProfilePic({
     Key? key,
-    required this.infoKey,
-    required this.info,
+    required this.image,
+    this.isShowPhotoUpload = false,
+    this.imageUploadBtnPress,
   }) : super(key: key);
 
-  final String infoKey, info;
+  final String image;
+  final bool isShowPhotoUpload;
+  final VoidCallback? imageUploadBtnPress;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Container(
+      padding: EdgeInsets.all(kDefaultPadding),
+      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+          color:
+              Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.08),
+        ),
+      ),
+      child: Stack(
+        alignment: Alignment.bottomRight,
         children: [
-          Text(
-            infoKey,
-            style: TextStyle(
-              color: Theme.of(context)
-                  .textTheme
-                  .bodyText1!
-                  .color!
-                  .withOpacity(0.8),
-            ),
+          CircleAvatar(
+            radius: 50,
+            backgroundImage: AssetImage(image),
           ),
-          Text(info),
+          InkWell(
+            onTap: imageUploadBtnPress,
+            child: CircleAvatar(
+              radius: 13,
+              backgroundColor: Theme.of(context).primaryColor,
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+          )
         ],
       ),
     );
