@@ -1,3 +1,5 @@
+import 'package:chat/screens/chats/chats_screen.dart';
+import 'package:chat/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -104,6 +106,12 @@ class _OtpFormState extends State<OtpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // check your code
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MainScreen(),
+                  ),
+                );
               }
             },
           ),
