@@ -4,6 +4,7 @@ import 'package:chat/screens/search/components/body.dart';
 import 'package:flutter/material.dart';
 
 import 'components/profile_pic.dart';
+import 'components/user_info_edit_field.dart';
 
 class EditProfileScreen extends StatelessWidget {
   @override
@@ -24,31 +25,31 @@ class EditProfileScreen extends StatelessWidget {
             Form(
               child: Column(
                 children: [
-                  UserEditField(
+                  UserInfoEditField(
                     text: "Name",
                     child: TextFormField(
                       initialValue: "Annette Black",
                     ),
                   ),
-                  UserEditField(
+                  UserInfoEditField(
                     text: "Email",
                     child: TextFormField(
                       initialValue: "annette@gmail.com",
                     ),
                   ),
-                  UserEditField(
+                  UserInfoEditField(
                     text: "Phone",
                     child: TextFormField(
                       initialValue: "(316) 555-0116",
                     ),
                   ),
-                  UserEditField(
+                  UserInfoEditField(
                     text: "Address",
                     child: TextFormField(
                       initialValue: "New York, NVC",
                     ),
                   ),
-                  UserEditField(
+                  UserInfoEditField(
                     text: "Old Password",
                     child: TextFormField(
                       obscureText: true,
@@ -61,7 +62,7 @@ class EditProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  UserEditField(
+                  UserInfoEditField(
                     text: "New Password",
                     child: TextFormField(
                       decoration: InputDecoration(hintText: "New Password"),
@@ -100,36 +101,6 @@ class EditProfileScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class UserEditField extends StatelessWidget {
-  const UserEditField({
-    Key? key,
-    required this.text,
-    required this.child,
-  }) : super(key: key);
-
-  final String text;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: Text(text),
-          ),
-          Expanded(
-            flex: 3,
-            child: child,
-          ),
-        ],
       ),
     );
   }
