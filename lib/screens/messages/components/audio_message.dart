@@ -12,23 +12,23 @@ class AudioMessage extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.55,
       padding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding * 0.75,
-        vertical: kDefaultPadding / 2.5,
+        horizontal: defaultPadding * 0.75,
+        vertical: defaultPadding / 2.5,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: kPrimaryColor.withOpacity(message!.isSender ? 1 : 0.1),
+        color: primaryColor.withOpacity(message!.isSender ? 1 : 0.1),
       ),
       child: Row(
         children: [
           Icon(
             Icons.play_arrow,
-            color: message!.isSender ? Colors.white : kPrimaryColor,
+            color: message!.isSender ? Colors.white : primaryColor,
           ),
           Expanded(
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.center,
@@ -38,7 +38,7 @@ class AudioMessage extends StatelessWidget {
                     height: 2,
                     color: message!.isSender
                         ? Colors.white
-                        : kPrimaryColor.withOpacity(0.4),
+                        : primaryColor.withOpacity(0.4),
                   ),
                   Positioned(
                     left: 0,
@@ -46,7 +46,7 @@ class AudioMessage extends StatelessWidget {
                       height: 8,
                       width: 8,
                       decoration: BoxDecoration(
-                        color: message!.isSender ? Colors.white : kPrimaryColor,
+                        color: message!.isSender ? Colors.white : primaryColor,
                         shape: BoxShape.circle,
                       ),
                     ),

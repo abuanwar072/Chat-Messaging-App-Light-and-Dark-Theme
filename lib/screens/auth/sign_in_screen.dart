@@ -16,7 +16,7 @@ class SignInScreen extends StatelessWidget {
         child: LayoutBuilder(
           builder: (context, constraints) {
             return SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: Column(
                 children: [
                   SizedBox(height: constraints.maxHeight * 0.1),
@@ -49,7 +49,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              vertical: kDefaultPadding),
+                              vertical: defaultPadding),
                           child: TextFormField(
                             validator: passwordValidator,
                             obscureText: true,
@@ -73,7 +73,7 @@ class SignInScreen extends StatelessWidget {
                             }
                           },
                         ),
-                        SizedBox(height: kDefaultPadding),
+                        SizedBox(height: defaultPadding),
                         TextButton(
                           onPressed: () => Navigator.push(
                             context,

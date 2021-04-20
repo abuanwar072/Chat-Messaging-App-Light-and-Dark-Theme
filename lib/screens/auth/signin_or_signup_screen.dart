@@ -10,7 +10,7 @@ class SigninOrSignupScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             children: [
               Spacer(flex: 2),
@@ -30,7 +30,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: kDefaultPadding * 1.5),
+              SizedBox(height: defaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
                 text: "Sign Up",

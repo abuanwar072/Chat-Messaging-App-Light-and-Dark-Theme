@@ -7,11 +7,11 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+      padding: EdgeInsets.symmetric(vertical: defaultPadding),
       child: Column(
         children: [
           RecentSearchContacts(),
-          SizedBox(height: kDefaultPadding),
+          SizedBox(height: defaultPadding),
           // you can show suggested style for search result
           SuggestedContacts()
         ],
@@ -31,7 +31,7 @@ class SuggestedContacts extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Text(
             "Suggested",
             style: Theme.of(context).textTheme.subtitle2!.copyWith(
@@ -43,12 +43,12 @@ class SuggestedContacts extends StatelessWidget {
                 ),
           ),
         ),
-        SizedBox(height: kDefaultPadding),
+        SizedBox(height: defaultPadding),
         ...List.generate(
           demoContactsImage.length,
           (index) => ListTile(
             contentPadding: EdgeInsets.symmetric(
-                horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
+                horizontal: defaultPadding, vertical: defaultPadding / 2),
             leading: CircleAvatar(
               radius: 24,
               backgroundImage: AssetImage(demoContactsImage[index]),

@@ -59,7 +59,7 @@ class _OtpFormState extends State<OtpForm> {
                   autofocus: true,
                 ),
               ),
-              SizedBox(width: kDefaultPadding),
+              SizedBox(width: defaultPadding),
               Expanded(
                 child: OtpTextFormField(
                   focusNode: _pin2Node,
@@ -71,7 +71,7 @@ class _OtpFormState extends State<OtpForm> {
                   },
                 ),
               ),
-              SizedBox(width: kDefaultPadding),
+              SizedBox(width: defaultPadding),
               Expanded(
                 child: OtpTextFormField(
                   focusNode: _pin3Node,
@@ -83,7 +83,7 @@ class _OtpFormState extends State<OtpForm> {
                   },
                 ),
               ),
-              SizedBox(width: kDefaultPadding),
+              SizedBox(width: defaultPadding),
               Expanded(
                 child: OtpTextFormField(
                   focusNode: _pin4Node,
@@ -97,7 +97,7 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding * 1.5),
+          SizedBox(height: defaultPadding * 1.5),
           PrimaryButton(
             text: "Next",
             press: () {

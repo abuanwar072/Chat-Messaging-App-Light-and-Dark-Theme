@@ -30,7 +30,7 @@ class Message extends StatelessWidget {
     }
 
     return Padding(
-      padding: const EdgeInsets.only(top: kDefaultPadding),
+      padding: const EdgeInsets.only(top: defaultPadding),
       child: Row(
         mainAxisAlignment:
             message.isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
@@ -40,7 +40,7 @@ class Message extends StatelessWidget {
               radius: 12,
               backgroundImage: AssetImage("assets/images/user_2.png"),
             ),
-            SizedBox(width: kDefaultPadding / 2),
+            SizedBox(width: defaultPadding / 2),
           ],
           messageContaint(message),
           if (message.isSender) MessageStatusDot(status: message.messageStatus)
@@ -59,18 +59,18 @@ class MessageStatusDot extends StatelessWidget {
     Color dotColor(MessageStatus status) {
       switch (status) {
         case MessageStatus.not_sent:
-          return kErrorColor;
+          return errorColor;
         case MessageStatus.not_view:
           return Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.1);
         case MessageStatus.viewed:
-          return kPrimaryColor;
+          return primaryColor;
         default:
           return Colors.transparent;
       }
     }
 
     return Container(
-      margin: EdgeInsets.only(left: kDefaultPadding / 2),
+      margin: EdgeInsets.only(left: defaultPadding / 2),
       height: 12,
       width: 12,
       decoration: BoxDecoration(

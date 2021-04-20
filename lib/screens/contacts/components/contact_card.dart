@@ -21,7 +21,7 @@ class ContactCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.symmetric(
-          horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
+          horizontal: defaultPadding, vertical: defaultPadding / 2),
       onTap: () {},
       leading: CircleAvatarWithActiveIndicator(
         image: image,
@@ -30,7 +30,7 @@ class ContactCard extends StatelessWidget {
       ),
       title: Text(name),
       subtitle: Padding(
-        padding: const EdgeInsets.only(top: kDefaultPadding / 2),
+        padding: const EdgeInsets.only(top: defaultPadding / 2),
         child: Text(
           number,
           style: TextStyle(

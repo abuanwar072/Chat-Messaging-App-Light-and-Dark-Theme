@@ -11,7 +11,7 @@ class RecentSearchContacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +25,7 @@ class RecentSearchContacts extends StatelessWidget {
                       .withOpacity(0.32),
                 ),
           ),
-          SizedBox(height: kDefaultPadding),
+          SizedBox(height: defaultPadding),
           SizedBox(
             width: double.infinity,
             height: 56,

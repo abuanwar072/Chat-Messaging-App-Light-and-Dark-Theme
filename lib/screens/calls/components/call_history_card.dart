@@ -24,8 +24,8 @@ class CallHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding,
-        vertical: kDefaultPadding / 2,
+        horizontal: defaultPadding,
+        vertical: defaultPadding / 2,
       ),
       onTap: () {},
       leading: CircleAvatarWithActiveIndicator(
@@ -35,16 +35,16 @@ class CallHistoryCard extends StatelessWidget {
       ),
       title: Text(name),
       subtitle: Padding(
-        padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+        padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
         child: Row(
           children: [
             Icon(
               isOutgoingCall ? Icons.north_east : Icons.south_west,
               size: 16,
               color:
-                  isOutgoingCall ? Theme.of(context).primaryColor : kErrorColor,
+                  isOutgoingCall ? Theme.of(context).primaryColor : errorColor,
             ),
-            SizedBox(width: kDefaultPadding / 2),
+            SizedBox(width: defaultPadding / 2),
             Text(
               time,
               style: TextStyle(

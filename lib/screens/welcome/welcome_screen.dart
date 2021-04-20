@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                                   .withOpacity(0.8),
                             ),
                       ),
-                      SizedBox(width: kDefaultPadding / 4),
+                      SizedBox(width: defaultPadding / 4),
                       Icon(
                         Icons.arrow_forward_ios,
                         size: 16,

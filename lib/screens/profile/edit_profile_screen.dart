@@ -14,7 +14,7 @@ class EditProfileScreen extends StatelessWidget {
         title: Text("Edit Profile"),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           children: [
             ProfilePic(
@@ -71,7 +71,7 @@ class EditProfileScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: kDefaultPadding),
+            SizedBox(height: defaultPadding),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -88,7 +88,7 @@ class EditProfileScreen extends StatelessWidget {
                     press: () {},
                   ),
                 ),
-                SizedBox(width: kDefaultPadding),
+                SizedBox(width: defaultPadding),
                 SizedBox(
                   width: 130,
                   child: PrimaryButton(

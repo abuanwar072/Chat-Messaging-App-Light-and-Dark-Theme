@@ -20,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
         child: Column(
           children: [
             ProfilePic(image: "assets/images/user_2.png"),
@@ -28,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
               "Annette Black",
               style: Theme.of(context).textTheme.headline6,
             ),
-            Divider(height: kDefaultPadding * 2),
+            Divider(height: defaultPadding * 2),
             Info(
               infoKey: "User ID",
               info: "@annette.me",
@@ -45,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
               infoKey: "Email Address",
               info: "demo@mail.com",
             ),
-            SizedBox(height: kDefaultPadding),
+            SizedBox(height: defaultPadding),
             Align(
               alignment: Alignment.centerRight,
               child: SizedBox(
@@ -68,4 +68,3 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
-

@@ -12,7 +12,7 @@ class ChatsScreen extends StatelessWidget {
       body: Body(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: kPrimaryColor,
+        backgroundColor: primaryColor,
         child: Icon(
           Icons.person_add_alt_1,
           color: Colors.white,

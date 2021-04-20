@@ -15,7 +15,7 @@ class UserInfoEditField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+      padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       child: Row(
         children: [
           Expanded(

@@ -16,14 +16,14 @@ class CallsSearchScreen extends StatelessWidget {
         children: [
           // Appbar search
           Container(
-            margin: EdgeInsets.only(bottom: kDefaultPadding),
+            margin: EdgeInsets.only(bottom: defaultPadding),
             padding: EdgeInsets.fromLTRB(
-              kDefaultPadding,
+              defaultPadding,
               0,
-              kDefaultPadding,
-              kDefaultPadding,
+              defaultPadding,
+              defaultPadding,
             ),
-            color: kPrimaryColor,
+            color: primaryColor,
             child: Form(
               child: TextFormField(
                 autofocus: true,
@@ -35,11 +35,11 @@ class CallsSearchScreen extends StatelessWidget {
                   fillColor: Colors.white,
                   prefixIcon: Icon(
                     Icons.search,
-                    color: kContentColorLightTheme.withOpacity(0.64),
+                    color: contentColorLightTheme.withOpacity(0.64),
                   ),
                   hintText: "Search",
                   hintStyle: TextStyle(
-                    color: kContentColorLightTheme.withOpacity(0.64),
+                    color: contentColorLightTheme.withOpacity(0.64),
                   ),
                 ),
               ),

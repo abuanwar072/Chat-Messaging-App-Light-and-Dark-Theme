@@ -32,8 +32,7 @@ class ChangePasswordScreen extends StatelessWidget {
                   },
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: kDefaultPadding),
+                  padding: const EdgeInsets.symmetric(vertical: defaultPadding),
                   child: TextFormField(
                     validator: (value) =>
                         MatchValidator(errorText: 'passwords do not match')

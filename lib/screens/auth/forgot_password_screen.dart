@@ -17,7 +17,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             "Integer quis dictum tellus, a auctorlorem. Cras in biandit leo suspendiss.",
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: Form(
               key: _formKey,
               child: TextFormField(

@@ -15,7 +15,7 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: LayoutBuilder(builder: (context, constraints) {
           return SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
             child: Column(
               children: [
                 SizedBox(height: constraints.maxHeight * 0.08),
@@ -44,7 +44,7 @@ class SignUpScreen extends StatelessWidget {
                           // Save it
                         },
                       ),
-                      SizedBox(height: kDefaultPadding),
+                      SizedBox(height: defaultPadding),
                       TextFormField(
                         validator: RequiredValidator(errorText: requiredField),
                         decoration: InputDecoration(hintText: 'Phone'),
@@ -55,7 +55,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: kDefaultPadding),
+                            vertical: defaultPadding),
                         child: TextFormField(
                           validator: passwordValidator,
                           decoration: InputDecoration(hintText: 'Password'),
@@ -76,7 +76,7 @@ class SignUpScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: kDefaultPadding),
+                            vertical: defaultPadding),
                         child: PrimaryButton(
                           text: 'Sign up',
                           press: () {

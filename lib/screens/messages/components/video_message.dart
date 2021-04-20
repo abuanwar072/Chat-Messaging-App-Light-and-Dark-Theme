@@ -20,7 +20,7 @@ class VideoMessage extends StatelessWidget {
               height: 25,
               width: 25,
               decoration: BoxDecoration(
-                color: kPrimaryColor,
+                color: primaryColor,
                 shape: BoxShape.circle,
               ),
               child: Icon(

@@ -25,12 +25,12 @@ class VideoCallingScreen extends StatelessWidget {
               Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  margin: EdgeInsets.all(kDefaultPadding),
+                  margin: EdgeInsets.all(defaultPadding),
                   height: 120,
                   width: 96,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
-                        Radius.circular(kDefaultPadding)),
+                    borderRadius:
+                        const BorderRadius.all(Radius.circular(defaultPadding)),
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(0, 24),
@@ -47,7 +47,7 @@ class VideoCallingScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: kDefaultPadding * 2, vertical: kDefaultPadding),
+                    horizontal: defaultPadding * 2, vertical: defaultPadding),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -65,7 +65,7 @@ class VideoCallingScreen extends StatelessWidget {
                     ),
                     CallOption(
                       icon: Icon(Icons.call_end),
-                      color: kErrorColor,
+                      color: errorColor,
                       press: () {},
                     ),
                   ],

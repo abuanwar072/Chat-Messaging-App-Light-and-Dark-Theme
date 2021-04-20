@@ -25,7 +25,7 @@ class AudioCallingScreen extends StatelessWidget {
                 radius: 50,
                 backgroundImage: AssetImage("assets/images/user_2.png"),
               ),
-              SizedBox(height: kDefaultPadding),
+              SizedBox(height: defaultPadding),
               Text(
                 "Ralph Edwards",
                 style: Theme.of(context)
@@ -33,7 +33,7 @@ class AudioCallingScreen extends StatelessWidget {
                     .subtitle1!
                     .copyWith(color: Colors.white),
               ),
-              SizedBox(height: kDefaultPadding / 2),
+              SizedBox(height: defaultPadding / 2),
               Text(
                 "Ringing",
                 style: TextStyle(color: Colors.white70),
@@ -41,7 +41,7 @@ class AudioCallingScreen extends StatelessWidget {
               Spacer(),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: kDefaultPadding * 2, vertical: kDefaultPadding),
+                    horizontal: defaultPadding * 2, vertical: defaultPadding),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -59,7 +59,7 @@ class AudioCallingScreen extends StatelessWidget {
                     ),
                     CallOption(
                       icon: Icon(Icons.call_end),
-                      color: kErrorColor,
+                      color: errorColor,
                       press: () {},
                     ),
                   ],

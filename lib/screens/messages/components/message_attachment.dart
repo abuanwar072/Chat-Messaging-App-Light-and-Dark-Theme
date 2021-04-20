@@ -58,13 +58,13 @@ class MessageAttachmentCard extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.all(kDefaultPadding / 2),
+        padding: const EdgeInsets.all(defaultPadding / 2),
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(kDefaultPadding * 0.75),
+              padding: EdgeInsets.all(defaultPadding * 0.75),
               decoration: BoxDecoration(
-                color: kPrimaryColor,
+                color: primaryColor,
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -72,7 +72,7 @@ class MessageAttachmentCard extends StatelessWidget {
                 size: 20,
               ),
             ),
-            SizedBox(height: kDefaultPadding / 2),
+            SizedBox(height: defaultPadding / 2),
             Text(
               title,
               style: Theme.of(context).textTheme.caption!.copyWith(
