@@ -1,5 +1,4 @@
 import 'package:chat/components/circle_avatar_with_active_indicator.dart';
-import 'package:chat/screens/search/components/body.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';

@@ -1,7 +1,6 @@
-import 'package:chat/screens/calls/calls_search_screen.dart';
-import 'package:chat/screens/search/components/body.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
 import 'components/call_history_card.dart';
 
 class CallsHistoryScreen extends StatelessWidget {
@@ -13,12 +12,7 @@ class CallsHistoryScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => CallsSearchScreen(),
-              ),
-            ),
+            onPressed: () {},
           ),
         ],
       ),

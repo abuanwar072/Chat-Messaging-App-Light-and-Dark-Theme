@@ -1,5 +1,4 @@
 import 'package:chat/constants.dart';
-import 'package:chat/screens/search/search_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';
@@ -28,13 +27,7 @@ class ChatsScreen extends StatelessWidget {
       actions: [
         IconButton(
           icon: Icon(Icons.search),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => SearchScreen(),
-                ));
-          },
+          onPressed: () {},
         ),
       ],
     );

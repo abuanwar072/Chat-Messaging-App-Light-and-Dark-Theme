@@ -1,6 +1,5 @@
 import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
-import 'package:chat/screens/profile/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'components/info.dart';
@@ -53,12 +52,7 @@ class ProfileScreen extends StatelessWidget {
                 child: PrimaryButton(
                   padding: EdgeInsets.all(5),
                   text: "Edit Profile",
-                  press: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => EditProfileScreen(),
-                    ),
-                  ),
+                  press: () {},
                 ),
               ),
             ),

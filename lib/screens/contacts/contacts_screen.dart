@@ -1,7 +1,6 @@
-import 'package:chat/screens/contacts/contact_srarch_screen.dart';
-import 'package:chat/screens/search/components/body.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
 import 'components/contact_card.dart';
 
 class ContactsScreen extends StatelessWidget {
@@ -10,17 +9,7 @@ class ContactsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("People"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ContactSearchScreen(),
-              ),
-            ),
-          )
-        ],
+        actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})],
       ),
       body: ListView.builder(
         itemCount: demoContactsImage.length,

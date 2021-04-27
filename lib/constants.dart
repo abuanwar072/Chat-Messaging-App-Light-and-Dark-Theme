@@ -30,3 +30,8 @@ const InputDecoration otpInputDecoration = InputDecoration(
   border: UnderlineInputBorder(),
   hintText: "0",
 );
+
+// For demo
+
+final List<String> demoContactsImage =
+    List.generate(5, (index) => "assets/images/user_${index + 1}.png");

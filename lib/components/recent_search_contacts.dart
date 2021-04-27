@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import '../screens/search/components/body.dart' show demoContactsImage;
 
 class RecentSearchContacts extends StatelessWidget {
   const RecentSearchContacts({
