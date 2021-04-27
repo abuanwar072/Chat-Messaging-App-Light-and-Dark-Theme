@@ -17,13 +17,13 @@ ThemeData lightThemeData(BuildContext context) {
       secondary: secondaryColor,
       error: errorColor,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
-      selectedItemColor: contentColorLightTheme.withOpacity(0.7),
-      unselectedItemColor: contentColorLightTheme.withOpacity(0.32),
-      selectedIconTheme: IconThemeData(color: primaryColor),
-      showUnselectedLabels: true,
-    ),
+    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    //   backgroundColor: Colors.white,
+    //   selectedItemColor: contentColorLightTheme.withOpacity(0.7),
+    //   unselectedItemColor: contentColorLightTheme.withOpacity(0.32),
+    //   selectedIconTheme: IconThemeData(color: primaryColor),
+    //   showUnselectedLabels: true,
+    // ),
     inputDecorationTheme: inputDecorationTheme.copyWith(
         fillColor: primaryColor.withOpacity(0.05)),
   );
@@ -44,13 +44,13 @@ ThemeData darkThemeData(BuildContext context) {
       secondary: secondaryColor,
       error: errorColor,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: contentColorLightTheme,
-      selectedItemColor: Colors.white70,
-      unselectedItemColor: contentColorDarkTheme.withOpacity(0.32),
-      selectedIconTheme: IconThemeData(color: primaryColor),
-      showUnselectedLabels: true,
-    ),
+    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    //   backgroundColor: contentColorLightTheme,
+    //   selectedItemColor: Colors.white70,
+    //   unselectedItemColor: contentColorDarkTheme.withOpacity(0.32),
+    //   selectedIconTheme: IconThemeData(color: primaryColor),
+    //   showUnselectedLabels: true,
+    // ),
     inputDecorationTheme: inputDecorationTheme,
   );
 }
