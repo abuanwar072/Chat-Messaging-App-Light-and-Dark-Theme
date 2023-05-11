@@ -1,6 +1,8 @@
+import 'package:chat/constants.dart';
+import 'package:chat/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
+import '../../components/primary_button.dart';
 import 'components/logo_with_title.dart';
-import 'components/otp_form.dart';
 
 class VerificationScreen extends StatefulWidget {
   @override
@@ -8,17 +10,38 @@ class VerificationScreen extends StatefulWidget {
 }
 
 class _VerificationScreenState extends State<VerificationScreen> {
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: LogoWithTitle(
         title: 'Verification',
-        subText: "SMS Verification code has been sent",
+        subText: "Verification code has been sent to your mail",
         children: [
-          Text("+880 18577 11111"),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-          // OTP Form
-          OtpForm(),
+          SizedBox(height: defaultPadding),
+          Form(
+            child: TextFormField(
+              onSaved: (otpCode) {},
+              keyboardType: TextInputType.number,
+              textInputAction: TextInputAction.send,
+              decoration: InputDecoration(hintText: "Enter OTP"),
+            ),
+          ),
+          SizedBox(height: defaultPadding),
+          PrimaryButton(
+            text: "Validate",
+            press: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MessagesScreen(),
+                  ),
+                );
+              }
+            },
+          ),
         ],
       ),
     );

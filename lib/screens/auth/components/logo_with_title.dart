@@ -22,9 +22,12 @@ class LogoWithTitle extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: constraints.maxHeight * 0.1),
-              SvgPicture.asset("assets/icons/Logo_light_theme.svg"),
+              SvgPicture.asset(
+                "assets/icons/Logo_light_theme.svg",
+                height: 100,
+              ),
               SizedBox(
-                height: constraints.maxHeight * 0.1,
+                height: constraints.maxHeight * 0.05,
                 width: double.infinity,
               ),
               Text(
