@@ -11,8 +11,8 @@ class ChatInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding,
-        vertical: kDefaultPadding / 2,
+        horizontal: defaultPadding,
+        vertical: defaultPadding / 2,
       ),
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
@@ -28,11 +28,11 @@ class ChatInputField extends StatelessWidget {
         child: Row(
           children: [
             Icon(Icons.mic, color: kPrimaryColor),
-            SizedBox(width: kDefaultPadding),
+            SizedBox(width: defaultPadding),
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(
-                  horizontal: kDefaultPadding * 0.75,
+                  horizontal: defaultPadding * 0.75,
                 ),
                 decoration: BoxDecoration(
                   color: kPrimaryColor.withOpacity(0.05),
@@ -44,11 +44,11 @@ class ChatInputField extends StatelessWidget {
                       Icons.sentiment_satisfied_alt_outlined,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1!
+                          .bodyLarge!
                           .color!
                           .withOpacity(0.64),
                     ),
-                    SizedBox(width: kDefaultPadding / 4),
+                    SizedBox(width: defaultPadding / 4),
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
@@ -61,16 +61,16 @@ class ChatInputField extends StatelessWidget {
                       Icons.attach_file,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1!
+                          .bodyLarge!
                           .color!
                           .withOpacity(0.64),
                     ),
-                    SizedBox(width: kDefaultPadding / 4),
+                    SizedBox(width: defaultPadding / 4),
                     Icon(
                       Icons.camera_alt_outlined,
                       color: Theme.of(context)
                           .textTheme
-                          .bodyText1!
+                          .bodyLarge!
                           .color!
                           .withOpacity(0.64),
                     ),

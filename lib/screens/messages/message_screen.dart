@@ -21,7 +21,7 @@ class MessagesScreen extends StatelessWidget {
           CircleAvatar(
             backgroundImage: AssetImage("assets/images/user_2.png"),
           ),
-          SizedBox(width: kDefaultPadding * 0.75),
+          SizedBox(width: defaultPadding * 0.75),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -46,7 +46,7 @@ class MessagesScreen extends StatelessWidget {
           icon: Icon(Icons.videocam),
           onPressed: () {},
         ),
-        SizedBox(width: kDefaultPadding / 2),
+        SizedBox(width: defaultPadding / 2),
       ],
     );
   }

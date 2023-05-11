@@ -30,6 +30,8 @@ dependencies:
 
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
+  flutter_svg: ^2.0.5
+  form_field_validator: ^1.1.0
 
 dev_dependencies:
   flutter_test:

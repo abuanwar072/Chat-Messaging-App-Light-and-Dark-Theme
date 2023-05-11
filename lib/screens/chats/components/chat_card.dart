@@ -19,7 +19,7 @@ class ChatCard extends StatelessWidget {
       onTap: press,
       child: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: kDefaultPadding, vertical: kDefaultPadding * 0.75),
+            horizontal: defaultPadding, vertical: defaultPadding * 0.75),
         child: Row(
           children: [
             Stack(
@@ -48,8 +48,7 @@ class ChatCard extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

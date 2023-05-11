@@ -1,5 +1,5 @@
 import 'package:chat/constants.dart';
-import 'package:chat/screens/signinOrSignUp/signin_or_signup_screen.dart';
+import 'package:chat/screens/auth/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class WelcomeScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
-                  .headline5!
+                  .headlineSmall!
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             Spacer(),
@@ -27,7 +27,7 @@ class WelcomeScreen extends StatelessWidget {
               style: TextStyle(
                 color: Theme.of(context)
                     .textTheme
-                    .bodyText1!
+                    .bodyLarge!
                     .color!
                     .withOpacity(0.64),
               ),
@@ -45,21 +45,21 @@ class WelcomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         "Skip",
-                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                               color: Theme.of(context)
                                   .textTheme
-                                  .bodyText1!
+                                  .bodyLarge!
                                   .color!
                                   .withOpacity(0.8),
                             ),
                       ),
-                      SizedBox(width: kDefaultPadding / 4),
+                      SizedBox(width: defaultPadding / 4),
                       Icon(
                         Icons.arrow_forward_ios,
                         size: 16,
                         color: Theme.of(context)
                             .textTheme
-                            .bodyText1!
+                            .bodyLarge!
                             .color!
                             .withOpacity(0.8),
                       )

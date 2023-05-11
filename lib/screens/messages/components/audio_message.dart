@@ -12,8 +12,8 @@ class AudioMessage extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.55,
       padding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding * 0.75,
-        vertical: kDefaultPadding / 2.5,
+        horizontal: defaultPadding * 0.75,
+        vertical: defaultPadding / 2.5,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
@@ -28,7 +28,7 @@ class AudioMessage extends StatelessWidget {
           Expanded(
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.center,

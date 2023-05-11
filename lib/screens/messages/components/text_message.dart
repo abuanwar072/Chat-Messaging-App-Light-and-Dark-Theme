@@ -18,8 +18,8 @@ class TextMessage extends StatelessWidget {
       //     ? Colors.white
       //     : Colors.black,
       padding: EdgeInsets.symmetric(
-        horizontal: kDefaultPadding * 0.75,
-        vertical: kDefaultPadding / 2,
+        horizontal: defaultPadding * 0.75,
+        vertical: defaultPadding / 2,
       ),
       decoration: BoxDecoration(
         color: kPrimaryColor.withOpacity(message!.isSender ? 1 : 0.1),
@@ -30,7 +30,7 @@ class TextMessage extends StatelessWidget {
         style: TextStyle(
           color: message!.isSender
               ? Colors.white
-              : Theme.of(context).textTheme.bodyText1!.color,
+              : Theme.of(context).textTheme.bodyLarge!.color,
         ),
       ),
     );

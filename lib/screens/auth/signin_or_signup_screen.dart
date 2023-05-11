@@ -1,7 +1,10 @@
 import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
+import 'package:chat/screens/auth/sign_in_screen.dart';
+import 'package:chat/screens/auth/sign_up_screen.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
   @override
@@ -9,14 +12,14 @@ class SigninOrSignupScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             children: [
               Spacer(flex: 2),
-              Image.asset(
+              SvgPicture.asset(
                 MediaQuery.of(context).platformBrightness == Brightness.light
-                    ? "assets/images/Logo_light.png"
-                    : "assets/images/Logo_dark.png",
+                    ? "assets/icons/Logo_light_theme.svg"
+                    : "assets/icons/Logo_dark_theme.svg",
                 height: 146,
               ),
               Spacer(),
@@ -25,15 +28,22 @@ class SigninOrSignupScreen extends StatelessWidget {
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ChatsScreen(),
+                    builder: (context) => SignInScreen(),
                   ),
                 ),
               ),
-              SizedBox(height: kDefaultPadding * 1.5),
+              SizedBox(height: defaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
                 text: "Sign Up",
-                press: () {},
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUpScreen(),
+                    ),
+                  );
+                },
               ),
               Spacer(flex: 2),
             ],
