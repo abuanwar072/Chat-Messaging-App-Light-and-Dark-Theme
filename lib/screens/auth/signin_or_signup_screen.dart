@@ -2,7 +2,6 @@ import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
 import 'package:chat/screens/auth/sign_in_screen.dart';
 import 'package:chat/screens/auth/sign_up_screen.dart';
-import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
