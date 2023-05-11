@@ -6,10 +6,12 @@ import '../../../constants.dart';
 class TextMessage extends StatelessWidget {
   const TextMessage({
     Key? key,
-    this.message,
+    required this.message,
+    this.isSender = false,
   }) : super(key: key);
 
-  final ChatMessage? message;
+  final String message;
+  final bool isSender;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +24,13 @@ class TextMessage extends StatelessWidget {
         vertical: defaultPadding / 2,
       ),
       decoration: BoxDecoration(
-        color: kPrimaryColor.withOpacity(message!.isSender ? 1 : 0.1),
+        color: kPrimaryColor.withOpacity(isSender ? 1 : 0.1),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Text(
-        message!.text,
+        message,
         style: TextStyle(
-          color: message!.isSender
+          color: isSender
               ? Colors.white
               : Theme.of(context).textTheme.bodyLarge!.color,
         ),

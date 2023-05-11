@@ -1,53 +1,35 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
+import '../../models/ChatMessage.dart';
+import 'components/chat_input_field.dart';
+import 'components/message.dart';
 
 class MessagesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
-      body: Body(),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      title: Row(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Flutter Dev Chat"),
+      ),
+      body: Column(
         children: [
-          BackButton(),
-          CircleAvatar(
-            backgroundImage: AssetImage("assets/images/user_2.png"),
-          ),
-          SizedBox(width: defaultPadding * 0.75),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Kristin Watson",
-                style: TextStyle(fontSize: 16),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+              child: ListView.builder(
+                itemCount: demeChatMessages.length,
+                itemBuilder: (context, index) => Message(
+                  message: demeChatMessages[index].text,
+                  isSender: index == 1,
+                ),
               ),
-              Text(
-                "Active 3m ago",
-                style: TextStyle(fontSize: 12),
-              )
-            ],
-          )
+            ),
+          ),
+          ChatInputField(),
         ],
       ),
-      actions: [
-        IconButton(
-          icon: Icon(Icons.local_phone),
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: Icon(Icons.videocam),
-          onPressed: () {},
-        ),
-        SizedBox(width: defaultPadding / 2),
-      ],
     );
   }
 }
