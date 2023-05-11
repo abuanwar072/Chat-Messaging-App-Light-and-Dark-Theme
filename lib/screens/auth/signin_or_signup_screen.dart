@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
+  const SigninOrSignupScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,24 +16,24 @@ class SigninOrSignupScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             children: [
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
               SvgPicture.asset(
                 MediaQuery.of(context).platformBrightness == Brightness.light
                     ? "assets/icons/Logo_light_theme.svg"
                     : "assets/icons/Logo_dark_theme.svg",
                 height: 146,
               ),
-              Spacer(),
+              const Spacer(),
               PrimaryButton(
                 text: "Sign In",
                 press: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SignInScreen(),
+                    builder: (context) => const SignInScreen(),
                   ),
                 ),
               ),
-              SizedBox(height: defaultPadding * 1.5),
+              const SizedBox(height: defaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
                 text: "Sign Up",
@@ -39,12 +41,12 @@ class SigninOrSignupScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SignUpScreen(),
+                      builder: (context) => const SignUpScreen(),
                     ),
                   );
                 },
               ),
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
             ],
           ),
         ),

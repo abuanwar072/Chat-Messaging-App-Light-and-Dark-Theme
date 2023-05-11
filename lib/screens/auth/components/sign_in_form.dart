@@ -24,7 +24,7 @@ class _SignInFormState extends State<SignInForm> {
         children: [
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
-            decoration: InputDecoration(hintText: 'Username'),
+            decoration: const InputDecoration(hintText: 'Username'),
             onSaved: (username) {
               // Save it
             },
@@ -34,7 +34,7 @@ class _SignInFormState extends State<SignInForm> {
             child: TextFormField(
               validator: RequiredValidator(errorText: "Password is required"),
               obscureText: true,
-              decoration: InputDecoration(hintText: 'Password'),
+              decoration: const InputDecoration(hintText: 'Password'),
               onSaved: (passaword) {
                 // Save it
               },
@@ -48,7 +48,7 @@ class _SignInFormState extends State<SignInForm> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MessagesScreen(),
+                    builder: (context) => const MessagesScreen(),
                   ),
                 );
               }

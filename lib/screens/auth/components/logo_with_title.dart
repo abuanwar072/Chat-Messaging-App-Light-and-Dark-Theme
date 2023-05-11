@@ -18,7 +18,7 @@ class LogoWithTitle extends StatelessWidget {
     return SafeArea(
       child: LayoutBuilder(builder: (context, constraints) {
         return SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
           child: Column(
             children: [
               SizedBox(height: constraints.maxHeight * 0.1),

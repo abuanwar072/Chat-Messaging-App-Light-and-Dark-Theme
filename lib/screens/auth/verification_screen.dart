@@ -5,6 +5,8 @@ import '../../components/primary_button.dart';
 import 'components/logo_with_title.dart';
 
 class VerificationScreen extends StatefulWidget {
+  const VerificationScreen({Key? key}) : super(key: key);
+
   @override
   _VerificationScreenState createState() => _VerificationScreenState();
 }
@@ -18,16 +20,16 @@ class _VerificationScreenState extends State<VerificationScreen> {
         title: 'Verification',
         subText: "Verification code has been sent to your mail",
         children: [
-          SizedBox(height: defaultPadding),
+          const SizedBox(height: defaultPadding),
           Form(
             child: TextFormField(
               onSaved: (otpCode) {},
               keyboardType: TextInputType.number,
               textInputAction: TextInputAction.send,
-              decoration: InputDecoration(hintText: "Enter OTP"),
+              decoration: const InputDecoration(hintText: "Enter OTP"),
             ),
           ),
-          SizedBox(height: defaultPadding),
+          const SizedBox(height: defaultPadding),
           PrimaryButton(
             text: "Validate",
             press: () {
@@ -36,7 +38,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MessagesScreen(),
+                    builder: (context) => const MessagesScreen(),
                   ),
                 );
               }

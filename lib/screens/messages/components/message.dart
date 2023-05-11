@@ -22,7 +22,7 @@ class Message extends StatelessWidget {
             isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
         children: [
           if (!isSender) ...[
-            CircleAvatar(
+            const CircleAvatar(
               radius: 12,
               backgroundColor: kPrimaryColor,
               child: Text(
@@ -30,7 +30,7 @@ class Message extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            SizedBox(width: defaultPadding / 2),
+            const SizedBox(width: defaultPadding / 2),
           ],
           TextMessage(message: message, isSender: isSender),
         ],

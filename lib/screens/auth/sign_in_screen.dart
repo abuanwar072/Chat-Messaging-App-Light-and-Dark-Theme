@@ -6,6 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'components/sign_in_form.dart';
 
 class SignInScreen extends StatelessWidget {
+  const SignInScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +31,9 @@ class SignInScreen extends StatelessWidget {
                         .headlineSmall!
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: defaultPadding),
-                  SignInForm(),
-                  SizedBox(height: defaultPadding),
+                  const SizedBox(height: defaultPadding),
+                  const SignInForm(),
+                  const SizedBox(height: defaultPadding),
                   TextButton(
                     onPressed: () {},
                     child: Text(
@@ -50,7 +52,7 @@ class SignInScreen extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignUpScreen(),
+                          builder: (context) => const SignUpScreen(),
                         ),
                       );
                     },

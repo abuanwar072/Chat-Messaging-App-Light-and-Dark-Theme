@@ -25,15 +25,15 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
-            decoration: InputDecoration(hintText: 'Username'),
+            decoration: const InputDecoration(hintText: 'Username'),
             onSaved: (username) {
               // Save it
             },
           ),
-          SizedBox(height: defaultPadding),
+          const SizedBox(height: defaultPadding),
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
-            decoration: InputDecoration(hintText: 'Email'),
+            decoration: const InputDecoration(hintText: 'Email'),
             onSaved: (email) {
               // Save it
             },
@@ -42,7 +42,7 @@ class _SignUpFormState extends State<SignUpForm> {
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
               validator: RequiredValidator(errorText: "Password is required"),
-              decoration: InputDecoration(hintText: 'Password'),
+              decoration: const InputDecoration(hintText: 'Password'),
               obscureText: true,
               onSaved: (passaword) {
                 // Save it
@@ -59,7 +59,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VerificationScreen(),
+                      builder: (context) => const VerificationScreen(),
                     ),
                   );
                 }
@@ -70,7 +70,7 @@ class _SignUpFormState extends State<SignUpForm> {
             onPressed: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => SignInScreen(),
+                builder: (context) => const SignInScreen(),
               ),
             ),
             child: Text.rich(

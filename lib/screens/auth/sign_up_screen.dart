@@ -5,6 +5,8 @@ import '../../constants.dart';
 import 'components/sign_up_form.dart';
 
 class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class SignUpScreen extends StatelessWidget {
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: constraints.maxHeight * 0.05),
-                SignUpForm(),
+                const SignUpForm(),
               ],
             ),
           );

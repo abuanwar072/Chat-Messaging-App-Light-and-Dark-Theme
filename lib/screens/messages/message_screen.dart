@@ -6,12 +6,14 @@ import 'components/chat_input_field.dart';
 import 'components/message.dart';
 
 class MessagesScreen extends StatelessWidget {
+  const MessagesScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Flutter Dev Chat"),
+        title: const Text("Flutter Dev Chat"),
       ),
       body: Column(
         children: [
@@ -27,7 +29,7 @@ class MessagesScreen extends StatelessWidget {
               ),
             ),
           ),
-          ChatInputField(),
+          const ChatInputField(),
         ],
       ),
     );

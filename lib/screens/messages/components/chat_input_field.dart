@@ -10,7 +10,7 @@ class ChatInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: defaultPadding,
         vertical: defaultPadding / 2,
       ),
@@ -18,20 +18,20 @@ class ChatInputField extends StatelessWidget {
         color: Theme.of(context).scaffoldBackgroundColor,
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
             blurRadius: 32,
-            color: Color(0xFF087949).withOpacity(0.08),
+            color: const Color(0xFF087949).withOpacity(0.08),
           ),
         ],
       ),
       child: SafeArea(
         child: Row(
           children: [
-            Icon(Icons.mic, color: kPrimaryColor),
-            SizedBox(width: defaultPadding),
+            const Icon(Icons.mic, color: kPrimaryColor),
+            const SizedBox(width: defaultPadding),
             Expanded(
               child: Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: defaultPadding * 0.75,
                 ),
                 decoration: BoxDecoration(
@@ -48,8 +48,8 @@ class ChatInputField extends StatelessWidget {
                           .color!
                           .withOpacity(0.64),
                     ),
-                    SizedBox(width: defaultPadding / 4),
-                    Expanded(
+                    const SizedBox(width: defaultPadding / 4),
+                    const Expanded(
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: "Type message",
@@ -65,7 +65,7 @@ class ChatInputField extends StatelessWidget {
                           .color!
                           .withOpacity(0.64),
                     ),
-                    SizedBox(width: defaultPadding / 4),
+                    const SizedBox(width: defaultPadding / 4),
                     Icon(
                       Icons.camera_alt_outlined,
                       color: Theme.of(context)
