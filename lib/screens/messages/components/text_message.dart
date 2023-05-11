@@ -17,7 +17,7 @@ class TextMessage extends StatelessWidget {
       // color: MediaQuery.of(context).platformBrightness == Brightness.dark
       //     ? Colors.white
       //     : Colors.black,
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: kDefaultPadding * 0.75,
         vertical: kDefaultPadding / 2,
       ),
@@ -30,7 +30,7 @@ class TextMessage extends StatelessWidget {
         style: TextStyle(
           color: message!.isSender
               ? Colors.white
-              : Theme.of(context).textTheme.bodyText1!.color,
+              : Theme.of(context).textTheme.bodyLarge!.color,
         ),
       ),
     );

@@ -7,18 +7,20 @@ import 'package:flutter/material.dart';
 import 'chat_card.dart';
 
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.fromLTRB(
+          padding: const EdgeInsets.fromLTRB(
               kDefaultPadding, 0, kDefaultPadding, kDefaultPadding),
           color: kPrimaryColor,
           child: Row(
             children: [
               FillOutlineButton(press: () {}, text: "Recent Message"),
-              SizedBox(width: kDefaultPadding),
+              const SizedBox(width: kDefaultPadding),
               FillOutlineButton(
                 press: () {},
                 text: "Active",
@@ -35,7 +37,7 @@ class Body extends StatelessWidget {
               press: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MessagesScreen(),
+                  builder: (context) => const MessagesScreen(),
                 ),
               ),
             ),

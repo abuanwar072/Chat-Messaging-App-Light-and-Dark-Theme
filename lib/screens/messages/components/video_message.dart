@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class VideoMessage extends StatelessWidget {
+  const VideoMessage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,11 +21,11 @@ class VideoMessage extends StatelessWidget {
             Container(
               height: 25,
               width: 25,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: kPrimaryColor,
                 shape: BoxShape.circle,
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.play_arrow,
                 size: 16,
                 color: Colors.white,

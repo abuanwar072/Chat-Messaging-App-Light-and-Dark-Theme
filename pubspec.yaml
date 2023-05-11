@@ -30,10 +30,12 @@ dependencies:
 
   # allows us to easily use any of the 977 fonts from fonts.google.com
   google_fonts: ^2.0.0
+  flutter_svg: ^2.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
