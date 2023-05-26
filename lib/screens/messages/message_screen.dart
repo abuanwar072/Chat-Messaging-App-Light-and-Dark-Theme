@@ -14,6 +14,12 @@ class MessagesScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text("Flutter Dev Chat"),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.logout_outlined),
+          ),
+        ],
       ),
       body: Column(
         children: [

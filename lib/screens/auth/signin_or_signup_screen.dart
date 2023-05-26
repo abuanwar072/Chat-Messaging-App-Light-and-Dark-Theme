@@ -1,4 +1,3 @@
-import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
 import 'package:chat/screens/auth/sign_in_screen.dart';
 import 'package:chat/screens/auth/sign_up_screen.dart';
@@ -24,20 +23,20 @@ class SigninOrSignupScreen extends StatelessWidget {
                 height: 146,
               ),
               const Spacer(),
-              PrimaryButton(
-                text: "Sign In",
-                press: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SignInScreen(),
-                  ),
-                ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignInScreen(),
+                    ),
+                  );
+                },
+                child: const Text("Sign In"),
               ),
               const SizedBox(height: defaultPadding * 1.5),
-              PrimaryButton(
-                color: Theme.of(context).colorScheme.secondary,
-                text: "Sign Up",
-                press: () {
+              ElevatedButton(
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -45,6 +44,9 @@ class SigninOrSignupScreen extends StatelessWidget {
                     ),
                   );
                 },
+                style:
+                    ElevatedButton.styleFrom(backgroundColor: kSecondaryColor),
+                child: const Text("Sign Up"),
               ),
               const Spacer(flex: 2),
             ],

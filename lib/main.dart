@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       title: 'The Flutter Way',
       debugShowCheckedModeBanner: false,
       theme: lightThemeData(context),
-      darkTheme: darkThemeData(context),
       themeMode: ThemeMode.light,
       home: const WelcomeScreen(),
     );

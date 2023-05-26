@@ -2,7 +2,6 @@ import 'package:chat/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../../../components/primary_button.dart';
 import '../../../constants.dart';
 
 class SignInForm extends StatefulWidget {
@@ -40,9 +39,8 @@ class _SignInFormState extends State<SignInForm> {
               },
             ),
           ),
-          PrimaryButton(
-            text: 'Sign in',
-            press: () {
+          ElevatedButton(
+            onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 Navigator.push(
@@ -53,6 +51,7 @@ class _SignInFormState extends State<SignInForm> {
                 );
               }
             },
+            child: const Text("Sign In"),
           ),
         ],
       ),

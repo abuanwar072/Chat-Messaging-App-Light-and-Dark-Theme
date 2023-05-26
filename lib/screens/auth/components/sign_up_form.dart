@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../../../components/primary_button.dart';
 import '../../../constants.dart';
 import '../sign_in_screen.dart';
 import '../verification_screen.dart';
@@ -51,9 +50,8 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
-            child: PrimaryButton(
-              text: 'Sign up',
-              press: () {
+            child: ElevatedButton(
+              onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   Navigator.push(
@@ -64,6 +62,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   );
                 }
               },
+              child: const Text("Sign Up"),
             ),
           ),
           TextButton(

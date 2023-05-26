@@ -1,7 +1,5 @@
 import 'package:chat/constants.dart';
-import 'package:chat/screens/messages/message_screen.dart';
 import 'package:flutter/material.dart';
-import '../../components/primary_button.dart';
 import 'components/logo_with_title.dart';
 
 class VerificationScreen extends StatefulWidget {
@@ -30,19 +28,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
             ),
           ),
           const SizedBox(height: defaultPadding),
-          PrimaryButton(
-            text: "Validate",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MessagesScreen(),
-                  ),
-                );
-              }
-            },
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text("Validate"),
           ),
         ],
       ),
