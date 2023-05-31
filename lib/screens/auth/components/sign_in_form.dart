@@ -1,6 +1,10 @@
+import 'package:amplify_flutter/amplify_flutter.dart';
+import 'package:chat/providers/user_provider.dart';
 import 'package:chat/screens/messages/message_screen.dart';
+import 'package:chat/shared/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 
@@ -15,6 +19,29 @@ class SignInForm extends StatefulWidget {
 
 class _SignInFormState extends State<SignInForm> {
   final _formKey = GlobalKey<FormState>();
+  late String _username, _password;
+
+  void signIn({required String username, required String password}) async {
+    final signInResponse = await context
+        .read<UserProvider>()
+        .signIn(username: username, password: password);
+
+    signInResponse.fold(
+      (error) => context.showError(error),
+      (signInResult) {
+        if (signInResult.nextStep.signInStep == AuthSignInStep.done) {
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MessagesScreen(),
+            ),
+            (route) => false,
+          );
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -26,7 +53,7 @@ class _SignInFormState extends State<SignInForm> {
             decoration: const InputDecoration(hintText: 'Username'),
             textInputAction: TextInputAction.next,
             onSaved: (username) {
-              // Save it
+              _username = username!;
             },
           ),
           Padding(
@@ -36,7 +63,7 @@ class _SignInFormState extends State<SignInForm> {
               obscureText: true,
               decoration: const InputDecoration(hintText: 'Password'),
               onSaved: (passaword) {
-                // Save it
+                _password = passaword!;
               },
             ),
           ),
@@ -44,15 +71,12 @@ class _SignInFormState extends State<SignInForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MessagesScreen(),
-                  ),
-                );
+                signIn(username: _username, password: _password);
               }
             },
-            child: const Text("Sign In"),
+            child: context.watch<UserProvider>().isLoading
+                ? const CircularProgressIndicator(color: Colors.white)
+                : const Text("Sign In"),
           ),
         ],
       ),

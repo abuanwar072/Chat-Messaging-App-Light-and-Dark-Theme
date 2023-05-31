@@ -1,5 +1,10 @@
+import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:chat/providers/user_provider.dart';
+import 'package:chat/repositories/user_repository.dart';
+import 'package:chat/shared/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 import '../sign_in_screen.dart';
@@ -16,6 +21,26 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
+  late String _username, _email, _password;
+
+  void signUp(String username, String password, String email) async {
+    final signUpResult =
+        await context.read<UserProvider>().signUp(username, password, email);
+    signUpResult.fold(
+      (error) => context.showError(error),
+      (step) {
+        if (step.nextStep.signUpStep == AuthSignUpStep.confirmSignUp) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => VerificationScreen(username: username),
+            ),
+          );
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -27,7 +52,7 @@ class _SignUpFormState extends State<SignUpForm> {
             textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: 'Username'),
             onSaved: (username) {
-              // Save it
+              _username = username!;
             },
           ),
           const SizedBox(height: defaultPadding),
@@ -37,7 +62,7 @@ class _SignUpFormState extends State<SignUpForm> {
             textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: 'Email'),
             onSaved: (email) {
-              // Save it
+              _email = email!;
             },
           ),
           Padding(
@@ -47,7 +72,7 @@ class _SignUpFormState extends State<SignUpForm> {
               decoration: const InputDecoration(hintText: 'Password'),
               obscureText: true,
               onSaved: (passaword) {
-                // Save it
+                _password = passaword!;
               },
             ),
           ),
@@ -57,15 +82,12 @@ class _SignUpFormState extends State<SignUpForm> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const VerificationScreen(),
-                    ),
-                  );
+                  signUp(_username, _password, _email);
                 }
               },
-              child: const Text("Sign Up"),
+              child: context.watch<UserProvider>().isLoading
+                  ? const CircularProgressIndicator(color: Colors.white)
+                  : const Text("Sign Up"),
             ),
           ),
           TextButton(
