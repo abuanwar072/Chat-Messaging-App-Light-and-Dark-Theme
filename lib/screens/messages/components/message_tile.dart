@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import 'text_message.dart';
 
-class Message extends StatelessWidget {
-  const Message({
+class MessageTile extends StatelessWidget {
+  const MessageTile({
     Key? key,
     required this.message,
     this.isSender = false,

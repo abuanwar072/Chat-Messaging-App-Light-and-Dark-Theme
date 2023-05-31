@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/ChatMessage.dart';
 import 'components/chat_input_field.dart';
-import 'components/message.dart';
+import 'components/message_tile.dart';
 
 class MessagesScreen extends StatelessWidget {
   const MessagesScreen({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class MessagesScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
               child: ListView.builder(
                 itemCount: demeChatMessages.length,
-                itemBuilder: (context, index) => Message(
+                itemBuilder: (context, index) => MessageTile(
                   message: demeChatMessages[index].text,
                   isSender: index == 1,
                 ),
