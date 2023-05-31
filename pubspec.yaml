@@ -28,10 +28,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
-  # allows us to easily use any of the 977 fonts from fonts.google.com
-  google_fonts: ^2.0.0
   flutter_svg: ^2.0.5
   form_field_validator: ^1.1.0
+  provider: ^6.0.5
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
