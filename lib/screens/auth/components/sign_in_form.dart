@@ -24,6 +24,7 @@ class _SignInFormState extends State<SignInForm> {
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
             decoration: const InputDecoration(hintText: 'Username'),
+            textInputAction: TextInputAction.next,
             onSaved: (username) {
               // Save it
             },

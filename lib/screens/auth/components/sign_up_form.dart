@@ -24,6 +24,7 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
+            textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: 'Username'),
             onSaved: (username) {
               // Save it
@@ -32,6 +33,8 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(height: defaultPadding),
           TextFormField(
             validator: RequiredValidator(errorText: requiredField),
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: 'Email'),
             onSaved: (email) {
               // Save it
