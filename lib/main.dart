@@ -22,7 +22,8 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // Let's run it
+  // UI is done, we are gonna add AWS Amplify to it
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

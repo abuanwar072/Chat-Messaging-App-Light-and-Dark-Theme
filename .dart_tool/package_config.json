@@ -69,7 +69,7 @@
     },
     {
       "name": "flutter_svg",
-      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/flutter_svg-2.0.6",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/flutter_svg-2.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -195,19 +195,19 @@
     },
     {
       "name": "vector_graphics",
-      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics-1.1.6",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics-1.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "vector_graphics_codec",
-      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.6",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "vector_graphics_compiler",
-      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.6",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.5",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
@@ -219,9 +219,9 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/xml-6.3.0",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/xml-6.2.2",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "2.18"
     },
     {
       "name": "chat",
@@ -230,7 +230,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-05-31T01:50:37.094049Z",
+  "generated": "2023-05-31T02:51:30.552962Z",
   "generator": "pub",
   "generatorVersion": "3.0.2"
 }
