@@ -2,6 +2,90 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "amplify_analytics_pinpoint",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_analytics_pinpoint-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_analytics_pinpoint_dart",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_analytics_pinpoint_dart-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_api",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_api-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_api_dart",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_api_dart-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_auth_cognito",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_auth_cognito-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_auth_cognito_android",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_auth_cognito_android-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_auth_cognito_dart",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_auth_cognito_dart-0.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_auth_cognito_ios",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_auth_cognito_ios-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_core",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_core-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_db_common",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_db_common-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_db_common_dart",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_db_common_dart-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_flutter",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_flutter-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_secure_storage",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_secure_storage-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "amplify_secure_storage_dart",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/amplify_secure_storage_dart-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "args",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/args-2.4.1",
       "packageUri": "lib/",
@@ -14,10 +98,34 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "aws_common",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/aws_common-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "aws_signature_v4",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/aws_signature_v4-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "built_collection",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/built_collection-5.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "built_value",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/built_value-8.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "characters",
@@ -38,6 +146,36 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "connectivity_plus",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/connectivity_plus-3.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/connectivity_plus_platform_interface-1.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "convert",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/convert-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "crclib",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/crclib-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/crypto-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -50,10 +188,52 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dbus",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/dbus-0.7.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "device_info_plus",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/device_info_plus-8.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info_plus_platform_interface",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "drift",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/drift-2.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "ffi",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/ffi-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "file",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/file-6.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "fixnum",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/fixnum-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter",
@@ -80,8 +260,32 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/abuanwar/Developer/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "form_field_validator",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/form_field_validator-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/http-0.13.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "http2",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/http2-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -98,10 +302,22 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/lints-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/logging-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "matcher",
@@ -122,8 +338,44 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/mime-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "nm",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/nm-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "oauth2",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/oauth2-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "os_detect",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/os_detect-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/package_info_plus-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -140,10 +392,64 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "path_provider",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "path_provider_foundation",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "path_provider_linux",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_provider_windows",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/petitparser-5.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "platform",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/platform-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "process",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/process-4.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "provider",
@@ -152,8 +458,32 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "retry",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/retry-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "shelf",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/shelf-1.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/abuanwar/Developer/flutter/bin/cache/pkg/sky_engine",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "smithy",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/smithy-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "smithy_aws",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/smithy_aws-0.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -164,6 +494,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "sqlite3",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/sqlite3-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "stack_trace",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/stack_trace-1.11.0",
       "packageUri": "lib/",
@@ -172,6 +508,12 @@
     {
       "name": "stream_channel",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/stream_channel-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "stream_transform",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -192,6 +534,24 @@
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/test_api-0.5.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "tuple",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/tuple-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "typed_data",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "uuid",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/uuid-3.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "vector_graphics",
@@ -218,6 +578,30 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "web_socket_channel",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/web_socket_channel-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "win32",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/win32-4.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "worker_bee",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/worker_bee-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "xdg_directories",
+      "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/xdg_directories-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///Users/abuanwar/.pub-cache/hosted/pub.dev/xml-6.2.2",
       "packageUri": "lib/",
@@ -230,7 +614,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-05-31T02:51:30.552962Z",
+  "generated": "2023-05-31T03:10:08.282364Z",
   "generator": "pub",
   "generatorVersion": "3.0.2"
 }

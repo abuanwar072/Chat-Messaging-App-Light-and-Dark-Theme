@@ -1,0 +1,13 @@
+{
+  "projectName": "flutterChat",
+  "version": "3.1",
+  "frontend": "flutter",
+  "flutter": {
+    "config": {
+      "ResDir": "./lib/"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

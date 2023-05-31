@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
 
   // Let's run it
   // UI is done, we are gonna add AWS Amplify to it
+  // Make sure run 'amplify init' on your project directory
+  // Let's fix those errors
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
