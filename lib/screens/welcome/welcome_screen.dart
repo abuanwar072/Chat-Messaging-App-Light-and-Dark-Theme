@@ -1,3 +1,4 @@
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:chat/constants.dart';
 import 'package:chat/providers/user_provider.dart';
 import 'package:chat/screens/auth/signin_or_signup_screen.dart';
@@ -38,14 +39,17 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ),
             const Spacer(flex: 3),
-            FutureBuilder(
+            FutureBuilder<AuthUser?>(
               future: context.read<UserProvider>().checkedLogedInUser(),
               builder: (context, snapshot) {
-                Future.delayed(
-                  const Duration(seconds: 1),
-                  () {
-                    if (snapshot.connectionState == ConnectionState.done) {
-                      if (snapshot.data != null) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  // made a simple mistake here
+                  // Let's restart the app
+                  // Perfect
+                  if (snapshot.data != null) {
+                    Future.delayed(
+                      const Duration(seconds: 1),
+                      () {
                         WidgetsBinding.instance.addPostFrameCallback(
                           (_) {
                             Navigator.pushAndRemoveUntil(
@@ -57,12 +61,13 @@ class WelcomeScreen extends StatelessWidget {
                             );
                           },
                         );
-                      } else {
-                        return const SkipButton();
-                      }
-                    }
-                  },
-                );
+                      },
+                    );
+                  } else {
+                    return const SkipButton();
+                  }
+                }
+
                 return const CircularProgressIndicator();
               },
             ),

@@ -1,7 +1,9 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../models/ChatMessage.dart';
+import '../../providers/user_provider.dart';
 import 'components/chat_input_field.dart';
 import 'components/message_tile.dart';
 
@@ -16,8 +18,12 @@ class MessagesScreen extends StatelessWidget {
         title: const Text("Flutter Dev Chat"),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.logout_outlined),
+            onPressed: () {
+              context.read<UserProvider>().signOut();
+            },
+            icon: context.watch<UserProvider>().isLoading
+                ? CircularProgressIndicator(color: Colors.white)
+                : const Icon(Icons.logout_outlined),
           ),
         ],
       ),

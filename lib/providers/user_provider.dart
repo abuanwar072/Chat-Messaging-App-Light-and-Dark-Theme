@@ -1,4 +1,5 @@
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
+import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:chat/repositories/user_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
@@ -43,6 +44,8 @@ class UserProvider with ChangeNotifier {
       username: username,
       password: password,
     );
+    final user = await _userRepositiry.getCurrentUser();
+    _currentUser = user;
     _setIsLoading(false);
     return response;
   }
@@ -55,5 +58,18 @@ class UserProvider with ChangeNotifier {
       return _currentUser;
     }
     return null;
+  }
+
+  Future<Either<String, SignOutResult>> signOut() async {
+    _setIsLoading(true);
+    try {
+      final response = await _userRepositiry.signOut();
+      _currentUser = null;
+      _setIsLoading(false);
+      return right(response);
+    } on AuthException catch (e) {
+      _setIsLoading(false);
+      return left(e.message);
+    }
   }
 }
