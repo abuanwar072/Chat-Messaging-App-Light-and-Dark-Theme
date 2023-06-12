@@ -46,6 +46,7 @@ class WelcomeScreen extends StatelessWidget {
                   // made a simple mistake here
                   // Let's restart the app
                   // Perfect
+                  // But it's not shift the screen once user is loged out
                   if (snapshot.data != null) {
                     Future.delayed(
                       const Duration(seconds: 1),

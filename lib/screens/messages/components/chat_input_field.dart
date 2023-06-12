@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
+import 'message_text_field.dart';
 
 class ChatInputField extends StatelessWidget {
   const ChatInputField({
@@ -49,13 +50,9 @@ class ChatInputField extends StatelessWidget {
                           .withOpacity(0.64),
                     ),
                     const SizedBox(width: defaultPadding / 4),
+                    // Last thing we need to do is store our chats to database
                     const Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Type message",
-                          border: InputBorder.none,
-                        ),
-                      ),
+                      child: MessageTextField(),
                     ),
                     Icon(
                       Icons.attach_file,

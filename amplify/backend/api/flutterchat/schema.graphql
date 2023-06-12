@@ -1,9 +1,25 @@
-# This "input" configures a global authorization rule to enable public access to
-# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
-input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
-
+# Ignore the warning it shows for Todo model, we are not gonna use it
+# recommended to delete it
 type Todo @model {
   id: ID!
   name: String!
   description: String
+}
+# We need to create a model for our message
+# I want only loged in user can read and create messages
+# We are done with out model
+type Message
+  @model
+  @auth(rules: [{ allow: private, operations: [read, create] }]) {
+  id: ID!
+  userId: String!
+  username: String!
+  message: String!
+  type: String!
+    @index(
+      name: "messagesByDate"
+      queryField: "messagesByDate"
+      sortKeyFields: ["createdAt"]
+    )
+  createdAt: String!
 }

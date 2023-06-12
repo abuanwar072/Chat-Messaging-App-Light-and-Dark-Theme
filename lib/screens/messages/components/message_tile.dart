@@ -1,3 +1,4 @@
+import 'package:chat/models/Message.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -10,7 +11,7 @@ class MessageTile extends StatelessWidget {
     this.isSender = false,
   }) : super(key: key);
 
-  final String message;
+  final Message message;
   final bool isSender;
 
   @override
@@ -22,17 +23,17 @@ class MessageTile extends StatelessWidget {
             isSender ? MainAxisAlignment.end : MainAxisAlignment.start,
         children: [
           if (!isSender) ...[
-            const CircleAvatar(
+            CircleAvatar(
               radius: 12,
               backgroundColor: kPrimaryColor,
               child: Text(
-                "A",
-                style: TextStyle(color: Colors.white),
+                message.username[0].toUpperCase(),
+                style: const TextStyle(color: Colors.white),
               ),
             ),
             const SizedBox(width: defaultPadding / 2),
           ],
-          TextMessage(message: message, isSender: isSender),
+          TextMessage(message: message.message, isSender: isSender),
         ],
       ),
     );

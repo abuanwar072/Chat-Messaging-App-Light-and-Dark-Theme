@@ -30,6 +30,8 @@ class Todo extends Model {
   final String id;
   final String? _name;
   final String? _description;
+  final TemporalDateTime? _createdAt;
+  final TemporalDateTime? _updatedAt;
 
   @override
   getInstanceType() => classType;
@@ -48,10 +50,10 @@ class Todo extends Model {
     try {
       return _name!;
     } catch(e) {
-      throw new DataStoreException(
-          DataStoreExceptionMessages.codeGenRequiredFieldForceCastExceptionMessage,
+      throw new AmplifyCodeGenModelException(
+          AmplifyExceptionMessages.codeGenRequiredFieldForceCastExceptionMessage,
           recoverySuggestion:
-            DataStoreExceptionMessages.codeGenRequiredFieldForceCastRecoverySuggestion,
+            AmplifyExceptionMessages.codeGenRequiredFieldForceCastRecoverySuggestion,
           underlyingException: e.toString()
           );
     }
@@ -61,7 +63,15 @@ class Todo extends Model {
     return _description;
   }
   
-  const Todo._internal({required this.id, required name, description}): _name = name, _description = description;
+  TemporalDateTime? get createdAt {
+    return _createdAt;
+  }
+  
+  TemporalDateTime? get updatedAt {
+    return _updatedAt;
+  }
+  
+  const Todo._internal({required this.id, required name, description, createdAt, updatedAt}): _name = name, _description = description, _createdAt = createdAt, _updatedAt = updatedAt;
   
   factory Todo({String? id, required String name, String? description}) {
     return Todo._internal(
@@ -93,14 +103,16 @@ class Todo extends Model {
     buffer.write("Todo {");
     buffer.write("id=" + "$id" + ", ");
     buffer.write("name=" + "$_name" + ", ");
-    buffer.write("description=" + "$_description");
+    buffer.write("description=" + "$_description" + ", ");
+    buffer.write("createdAt=" + (_createdAt != null ? _createdAt!.format() : "null") + ", ");
+    buffer.write("updatedAt=" + (_updatedAt != null ? _updatedAt!.format() : "null"));
     buffer.write("}");
     
     return buffer.toString();
   }
   
   Todo copyWith({String? name, String? description}) {
-    return Todo(
+    return Todo._internal(
       id: id,
       name: name ?? this.name,
       description: description ?? this.description);
@@ -109,14 +121,16 @@ class Todo extends Model {
   Todo.fromJson(Map<String, dynamic> json)  
     : id = json['id'],
       _name = json['name'],
-      _description = json['description'];
+      _description = json['description'],
+      _createdAt = json['createdAt'] != null ? TemporalDateTime.fromString(json['createdAt']) : null,
+      _updatedAt = json['updatedAt'] != null ? TemporalDateTime.fromString(json['updatedAt']) : null;
   
   Map<String, dynamic> toJson() => {
-    'id': id, 'name': _name, 'description': _description
+    'id': id, 'name': _name, 'description': _description, 'createdAt': _createdAt?.format(), 'updatedAt': _updatedAt?.format()
   };
   
   Map<String, Object?> toMap() => {
-    'id': id, 'name': _name, 'description': _description
+    'id': id, 'name': _name, 'description': _description, 'createdAt': _createdAt, 'updatedAt': _updatedAt
   };
 
   static final QueryModelIdentifier<TodoModelIdentifier> MODEL_IDENTIFIER = QueryModelIdentifier<TodoModelIdentifier>();
@@ -139,6 +153,20 @@ class Todo extends Model {
       key: Todo.DESCRIPTION,
       isRequired: false,
       ofType: ModelFieldType(ModelFieldTypeEnum.string)
+    ));
+    
+    modelSchemaDefinition.addField(ModelFieldDefinition.nonQueryField(
+      fieldName: 'createdAt',
+      isRequired: false,
+      isReadOnly: true,
+      ofType: ModelFieldType(ModelFieldTypeEnum.dateTime)
+    ));
+    
+    modelSchemaDefinition.addField(ModelFieldDefinition.nonQueryField(
+      fieldName: 'updatedAt',
+      isRequired: false,
+      isReadOnly: true,
+      ofType: ModelFieldType(ModelFieldTypeEnum.dateTime)
     ));
   });
 }

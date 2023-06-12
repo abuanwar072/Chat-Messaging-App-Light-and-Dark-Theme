@@ -4,8 +4,10 @@
     "apiName": "flutterchat",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authflutterchat313de103"
+    },
+    "additionalAuthTypes": [],
+    "conflictResolution": {}
   }
 }

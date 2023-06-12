@@ -69,7 +69,7 @@ class UserProvider with ChangeNotifier {
       return right(response);
     } on AuthException catch (e) {
       _setIsLoading(false);
-      return left(e.message);
+      return left(e.message); 
     }
   }
 }

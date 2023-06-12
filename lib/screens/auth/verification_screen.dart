@@ -6,6 +6,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
 import '../../providers/user_provider.dart';
 import 'components/logo_with_title.dart';
+import 'sign_in_screen.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({Key? key, required this.username})
@@ -50,14 +51,26 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     .confirmSignUp(username: widget.username, code: _otpCode);
                 result.fold(
                   (error) => context.showError(error),
-                  (_) {
-                    Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MessagesScreen(),
-                      ),
-                      (route) => false,
-                    );
+                  (isConfirmed) {
+                    if (isConfirmed) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: const Text("User has been confirmed"),
+                          action: SnackBarAction(
+                            label: "Login",
+                            onPressed: () {
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SignInScreen(),
+                                ),
+                                (route) => false,
+                              );
+                            },
+                          ),
+                        ),
+                      );
+                    }
                   },
                 );
               }

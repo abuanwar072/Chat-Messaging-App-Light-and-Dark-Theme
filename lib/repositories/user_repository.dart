@@ -61,4 +61,4 @@ class UserRepository {
   Future<SignOutResult> signOut() {
     return Amplify.Auth.signOut();
   }
-}
+} 
