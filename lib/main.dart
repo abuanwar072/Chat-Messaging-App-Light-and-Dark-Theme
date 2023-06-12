@@ -40,11 +40,6 @@ Future<void> configureAmplify() async {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // Let's run it
-  // UI is done, we are gonna add AWS Amplify to it
-  // Make sure run 'amplify init' on your project directory
-  // Let's fix those errors
-  // Let's configure our Amplify
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
