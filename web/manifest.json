@@ -1,6 +1,6 @@
 {
-    "name": "chat_v2",
-    "short_name": "chat_v2",
+    "name": "chat",
+    "short_name": "chat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

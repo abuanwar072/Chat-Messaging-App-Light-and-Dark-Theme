@@ -9,7 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // This is the free verstion of Flutter Chat App UI Kit
+  // Full code: https://www.patreon.com/posts/chat-app-ui-for-93094811
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
