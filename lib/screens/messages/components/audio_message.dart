@@ -1,4 +1,4 @@
-import 'package:chat/models/ChatMessage.dart';
+import '../../../models/chat_message.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -6,7 +6,7 @@ import '../../../constants.dart';
 class AudioMessage extends StatelessWidget {
   final ChatMessage? message;
 
-  const AudioMessage({Key? key, this.message}) : super(key: key);
+  const AudioMessage({super.key, this.message});
   @override
   Widget build(BuildContext context) {
     return Container(

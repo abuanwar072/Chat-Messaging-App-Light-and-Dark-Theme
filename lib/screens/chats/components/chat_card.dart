@@ -1,14 +1,14 @@
-import 'package:chat/models/Chat.dart';
+import '../../../models/chat.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
 class ChatCard extends StatelessWidget {
   const ChatCard({
-    Key? key,
+    super.key,
     required this.chat,
     required this.press,
-  }) : super(key: key);
+  });
 
   final Chat chat;
   final VoidCallback press;
@@ -55,8 +55,8 @@ class ChatCard extends StatelessWidget {
                   children: [
                     Text(
                       chat.name,
-                      style:
-                          const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(height: 8),
                     Opacity(

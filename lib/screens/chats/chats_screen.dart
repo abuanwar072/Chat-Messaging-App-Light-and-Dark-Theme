@@ -1,13 +1,13 @@
-import 'package:chat/constants.dart';
+import '../../constants.dart';
 import 'package:flutter/material.dart';
 
 import 'components/body.dart';
 
 class ChatsScreen extends StatefulWidget {
-  const ChatsScreen({Key? key}) : super(key: key);
+  const ChatsScreen({super.key});
 
   @override
-  _ChatsScreenState createState() => _ChatsScreenState();
+  State<ChatsScreen> createState() => _ChatsScreenState();
 }
 
 class _ChatsScreenState extends State<ChatsScreen> {

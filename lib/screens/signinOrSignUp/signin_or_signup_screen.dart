@@ -1,10 +1,11 @@
-import 'package:chat/components/primary_button.dart';
-import 'package:chat/constants.dart';
-import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/primary_button.dart';
+import '../../constants.dart';
+import '../chats/chats_screen.dart';
+
 class SigninOrSignupScreen extends StatelessWidget {
-  const SigninOrSignupScreen({Key? key}) : super(key: key);
+  const SigninOrSignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
