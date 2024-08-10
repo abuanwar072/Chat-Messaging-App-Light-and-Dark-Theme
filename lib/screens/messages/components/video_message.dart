@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class VideoMessage extends StatelessWidget {
-  const VideoMessage({Key? key}) : super(key: key);
+  const VideoMessage({super.key});
 
   @override
   Widget build(BuildContext context) {

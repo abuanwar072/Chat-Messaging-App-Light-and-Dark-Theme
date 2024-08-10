@@ -1,10 +1,10 @@
-import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
 import 'components/body.dart';
 
 class MessagesScreen extends StatelessWidget {
-  const MessagesScreen({Key? key}) : super(key: key);
+  const MessagesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,16 @@ class MessagesScreen extends StatelessWidget {
   AppBar buildAppBar() {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: Row(
+      title: const Row(
         children: [
-          const BackButton(),
-          const CircleAvatar(
+          BackButton(),
+          CircleAvatar(
             backgroundImage: AssetImage("assets/images/user_2.png"),
           ),
-          const SizedBox(width: kDefaultPadding * 0.75),
+          SizedBox(width: kDefaultPadding * 0.75),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 "Kristin Watson",
                 style: TextStyle(fontSize: 16),

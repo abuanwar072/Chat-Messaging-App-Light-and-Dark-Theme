@@ -1,9 +1,9 @@
-import 'package:chat/constants.dart';
-import 'package:chat/screens/signinOrSignUp/signin_or_signup_screen.dart';
+import '../../constants.dart';
+import '../signinOrSignUp/signin_or_signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

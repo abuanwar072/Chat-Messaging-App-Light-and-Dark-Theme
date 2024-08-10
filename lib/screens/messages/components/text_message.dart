@@ -1,13 +1,13 @@
-import 'package:chat/models/ChatMessage.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
+import '../../../models/chat_message.dart';
 
 class TextMessage extends StatelessWidget {
   const TextMessage({
-    Key? key,
+    super.key,
     this.message,
-  }) : super(key: key);
+  });
 
   final ChatMessage? message;
 
